@@ -3,10 +3,9 @@ const help = (prefix) => {
       〘 𝙈𝙄𝘿𝙊𝙍𝙄𝙔𝘼 𝘽𝙊𝙏🧸✓ 〙
 
    ║➥  ✓ [INFORMAÇÕES]
-   ║➥Prefix: 「  ${prefix}  」
-   ║➥Criador : Kratosツ
-   ║➥ Canal do criador: https://youtube.com/channel/UC1lsMlGC6OI_llwN0xeEXZA
-   ║➥ Wpp :http://wa.me/+5586994292223*
+BEM VINDOS AO NOSSO GRUPO 
+  ESSAS SÃO ALGUNS COMANDO QUE EU POSSUO 
+      SE DIVIRTAM =)
    ║
    ║➣〘 𝙈𝙀𝙉𝙐 𝙂𝙀𝙍𝘼𝙇 〙
    ║
