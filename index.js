@@ -80,7 +80,7 @@ const vcard = 'BEGIN:VCARD\n' // metadata of the contact card
             + 'VERSION:3.0\n' 
             + 'FN:Kratos\n' // full name
             + 'ORG:Owner Bot;\n' // the organization of the contact
-            + 'TEL;type=CELL;type=VOICE;waid=558694292223 :+55 11 910622412\n' // ID do WhatsApp + número de telefone
+            + 'TEL;type=CELL;type=VOICE;waid=5511910622412 :+5511910622412\n' // ID do WhatsApp + número de telefone
             + 'END:VCARD'
 /******END OF VCARD INPUT******/
 
@@ -193,21 +193,13 @@ async function starts() {
 			console.log(anu)
 			if (anu.action == 'add') {
 				num = anu.participants[0]
-				try {
-					ppimg = await client.getProfilePicture(`${anu.participants[0].split('@')[0]}@c.us`)
-				} catch {
-					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
-				}
-				teks = `𝙊𝙋𝘼 𝘼𝙇𝙀𝙆 @${num.split('@')[0]}\n𝘽𝙀𝙈 𝙑𝙄𝙉𝘿𝙊 𝘼𝙊 𝙂𝙍𝙐𝙋𝙊 𝙈𝘼𝙉𝙊🍇 *${mdata.subject}*`
+				
+				teks = `𝙊𝙋𝘼 @${num.split('@')[0]}\n𝘽𝙀𝙈 𝙑𝙄𝙉𝘿𝙊 𝘼𝙊 𝙂𝙍𝙐𝙋𝙊  *${mdata.subject}*`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			} else if (anu.action == 'remove') {
 				num = anu.participants[0]
-				try {
-					ppimg = await client.getProfilePicture(`${num.split('@')[0]}@c.us`)
-				} catch {
-					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
-				}
+			
 				teks = `𝘼𝙇𝘼 𝙊 𝙍𝘼𝙉𝘿𝙊𝙈 𝙎𝘼𝙄𝙐 𝙆𝙆𝙆𝙆𝙆𝙅 @${num.split('@')[0]}👋`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
@@ -269,7 +261,7 @@ async function starts() {
         		const bisakah = ['Bisa','Tidak Bisa']
 		        const kapankah = ['Hari Lagi','Minggu Lagi','Bulan Lagi','Tahun Lagi']
 			const botNumber = client.user.jid
-			const ownerNumber = ["558694292223@s.whatsapp.net"] // replace this with your number
+			const ownerNumber = ["5511910622412@s.whatsapp.net"] // replace this with your number
 			const nomorOwner = [ownerNumber]
 			const isGroup = from.endsWith('@g.us')
 			const totalchat = await client.chats.all()
